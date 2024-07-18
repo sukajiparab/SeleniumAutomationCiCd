@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="sukajiparab.seleniumFrameworkDesign.TestComponent.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Error Validation(failed)" verbose="0">
+    <classes>
+      <class name="sukajiparab.seleniumFrameworkDesign.ErrorValidation">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="LoginValidation"/>
+          <include name="TearDown"/>
+        </methods>
+      </class> <!-- sukajiparab.seleniumFrameworkDesign.ErrorValidation -->
+    </classes>
+  </test> <!-- Error Validation(failed) -->
+  <test thread-count="5" parallel="tests" name="Submit Order Test(failed)" verbose="0">
+    <classes>
+      <class name="sukajiparab.seleniumFrameworkDesign.submitOrderTest">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="submitOrder" invocation-numbers="1"/>
+          <include name="TearDown"/>
+          <include name="OrderHistoryTest"/>
+        </methods>
+      </class> <!-- sukajiparab.seleniumFrameworkDesign.submitOrderTest -->
+    </classes>
+  </test> <!-- Submit Order Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
